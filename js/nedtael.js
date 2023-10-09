@@ -31,10 +31,10 @@ function update(event,no)
 	document.getElementById('minutes'+no).value = minutes;
 	document.getElementById('seconds'+no).value = seconds;
 	
-	// If days are negative timer is expired, then stop timer by canceling IDx
 	if (days<0)
 	{
 		clearInterval('ID'+no);
 		document.getElementById('cnt'+no).innerHTML = "EXPIRED";
 	}
 }
+//credit til Bola den almægtig//

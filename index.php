@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<header>
+<?php
+include_once "header.php";
+?>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,7 +45,9 @@
             <tr><td>14</td><td>Oliver</td></tr>
         </table>
     </body>
-</header>
 <html>
 </html>
-<!--credit til Rune-->
+<?php
+include_once "footer.php"
+?>
+<!--credit til Rune the homie-->
