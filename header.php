@@ -48,7 +48,6 @@
     else
         echo "<a HREF='indlejret.php'>Indlejrede ting</a>";
 ?>
-<a HREF="lorem.html" target="_blank">Lorem ipsum</a>
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
   <i class="fa fa-bars"></i>
 </a>
