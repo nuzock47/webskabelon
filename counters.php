@@ -2,7 +2,7 @@
 
 include_once "header.php";
 ?>
-	
+<!--kan ikke får nedtæling til at virke-->	
 <script type="text/javascript" src="java\main.js"></script>
 <script type="text/javascript">
 	var ID1=window.setInterval(function () {update(new Date("Oct 14 2023 15:30:00"),1)} , 1000);

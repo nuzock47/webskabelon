@@ -1,40 +1,22 @@
-var now = new Date();
-var seconds = 0;
-var e_secLeft = 0;
-var minutes = 0;
-var e_minsLeft = 0;
-var hours = 0;
-var e_hoursLeft = 0;
-var days = 0;
-var msPerDay = 24*60*60*1000;
-var e_daysLeft = 0;
+function Updatedata(){
+	var datoer = [new Date("2023-20-14") - new Date(), new Date("2023-12-21") - new Date(), new Date("2025-6-28") - new Date()]
+	var events = ["Efterårsferien","Juleferien","Min dimmisionsdag"]
+	for (let i = 0; i < 3; i++){
+		var months = Math.floor(datoer[i]/(1000*60*60*24*30))
+		var days = Math.floor((datoer[i] % (1000*60*60*24*30))/(1000*60*60*24))
+		var timer = Math.floor((datoer[i] % (1000*60*60*24))/(1000*60*60*24))
+		var minutter = Math.floor((datoer[i] % (1000*60*60))/(1000*60))
+		var sec = Math.floor((datoer[i] % (1000*60))/1000)
 
+		document.getElementById("count"+(i+1)).innerHTML = "Der er " + months + " måneder, " + days + " dage, " + hours + " timer, " + minutes + " minutter og " + seconds + " sekunder til "
 
-function update(event,no)
-{
-	now = new Date();
-	timeLeft = (event - now);
-	e_daysLeft = timeLeft/msPerDay;
-	days = Math.floor(e_daysLeft);
-
-	e_hoursLeft = (e_daysLeft-days)*24;
-	hours = Math.floor(e_hoursLeft);
-
-	e_minsLeft = (e_hoursLeft-hours)*60;
-	minutes = Math.floor(e_minsLeft);
-
-	e_secLeft=(e_minsLeft-minutes)*60;
-	seconds=Math.floor(e_secLeft);
-    
-	document.getElementById('days'+no).value = days;
-	document.getElementById('hours'+no).value = hours;
-	document.getElementById('minutes'+no).value = minutes;
-	document.getElementById('seconds'+no).value = seconds;
-	
-	if (days<0)
-	{
-		clearInterval('ID'+no);
-		document.getElementById('cnt'+no).innerHTML = "EXPIRED";
+		if (months<0){
+			document.getElementById("count"+(i+1)).innerHTML = "EVENT OVERSKREVET"		
+		}
 	}
+	setTimeout(Updatedata,1000);
 }
-//credit til Bola den almægtig//
+
+window.onload = Updatedata
+
+//credit til andreas//

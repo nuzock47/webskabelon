@@ -218,8 +218,15 @@ body
 		  <img src="images\mypic.jpg" alt="mypic" width="284" height="213">
 		  <p class="caption">Oliver Berring</p>
 		</div>
-        <!--tekst jeg skal skrive til about me her-->
-    </body>
+    <table>
+        <tr><th>Hårfarve</tr><th>sort</th></tr>
+        <tr><th>øjenfarve</tr><th>mørkebrun</th></tr>
+        <tr><th>særlig kendtegn</tr><th>2 meter og træls</th></tr>
+        <tr><th>elsker</tr><th>mine hobbyer og dem jeg elsker</th></tr>
+        <tr><th>hobbyer</tr><th>video spil, manga, musik og ændre nørde ting</th></tr>
+        <tr><th>prag forventninger</tr><th>håber bare det bliver en fed tur ikke nået spcifikt bare det bliver godt</th></tr>
+    <table>
+      </body>
 <html>
 </html>
 <?php
